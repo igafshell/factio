@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -23,7 +23,7 @@ const { title } = Astro.props;
 <style is:global>
 	@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 	@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
+	@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -51,7 +51,7 @@ const { title } = Astro.props;
 			monospace;
 	}
 
-	.logo-font {
+	.header-font {
 		font-family: "Kode Mono", monospace;
 		font-optical-sizing: auto;
 		font-weight: 500;
@@ -63,5 +63,13 @@ const { title } = Astro.props;
 		font-optical-sizing: auto;
 		font-weight: 400;
 		font-style: normal;
+	}
+	.barcode-font {
+		font-family: "Libre Barcode 128 Text", system-ui;
+		font-weight: 400;
+		font-style: normal;
+	}
+	.link-hover {
+		@apply hover:text-[#fff] transition-colors;
 	}
 </style>
